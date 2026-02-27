@@ -15,7 +15,7 @@
             font-family: Verdana, Geneva, sans-serif;
             background-color: #FFFFFF;
             color: #000000;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.6;
         }
 
@@ -66,7 +66,7 @@
         .nav-links a {
             color: #000000;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .nav-links a:hover {
@@ -87,7 +87,7 @@
             background-color: #FFFFCC;
             color: #CC0000;
             padding: 4px 12px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: bold;
             border: 1px solid #CC0000;
             margin-bottom: 20px;
@@ -108,7 +108,7 @@
             max-width: 550px;
             margin: 0 auto 25px auto;
             color: #444444;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .hero-buttons {
@@ -120,7 +120,7 @@
         .btn {
             display: inline-block;
             padding: 8px 18px;
-            font-size: 12px;
+            font-size: 13px;
             text-decoration: none;
             font-family: Verdana, sans-serif;
         }
@@ -147,6 +147,59 @@
             color: #000000;
         }
 
+        .btn-whatsapp {
+            background-color: #F5F5F5;
+            color: #000000;
+            border: 2px solid #000000;
+            font-family: "Courier New", monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-whatsapp .wa-icon {
+            font-size: 14px;
+            margin-right: 6px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+            border-color: #000000;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 64px;
+            height: 78px;
+            background-color: #F5F5F5;
+            border: 2px solid #000000;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-family: "Courier New", monospace;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: 999;
+        }
+
+        .whatsapp-float .wa-float-label {
+            display: block;
+            margin-top: 6px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
         /* SERVICES */
         .services {
             padding: 40px 20px;
@@ -162,7 +215,7 @@
 
         .section-tag {
             font-family: "Courier New", monospace;
-            font-size: 11px;
+            font-size: 12px;
             color: #CC0000;
             display: block;
             margin-bottom: 5px;
@@ -193,14 +246,14 @@
 
         .service-title {
             font-family: "Times New Roman", serif;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
             color: #CC0000;
             margin-bottom: 8px;
         }
 
         .service-desc {
-            font-size: 12px;
+            font-size: 13px;
             color: #444444;
             margin-bottom: 10px;
         }
@@ -210,7 +263,7 @@
             background-color: #FFFFCC;
             color: #CC0000;
             padding: 2px 6px;
-            font-size: 10px;
+            font-size: 11px;
             border: 1px solid #CC0000;
         }
 
@@ -245,12 +298,12 @@
         .why-item h4 {
             font-family: "Times New Roman", serif;
             color: #CC0000;
-            font-size: 13px;
+            font-size: 14px;
             margin-bottom: 5px;
         }
 
         .why-item p {
-            font-size: 11px;
+            font-size: 12px;
             color: #444444;
         }
 
@@ -277,13 +330,13 @@
         }
 
         .footer-brand p {
-            font-size: 11px;
+            font-size: 12px;
             color: #444444;
         }
 
         .footer-contact h4 {
             font-family: "Courier New", monospace;
-            font-size: 11px;
+            font-size: 12px;
             color: #CC0000;
             margin-bottom: 8px;
         }
@@ -293,7 +346,7 @@
         }
 
         .footer-contact li {
-            font-size: 11px;
+            font-size: 12px;
             margin-bottom: 4px;
             color: #000000;
         }
@@ -303,12 +356,16 @@
             padding-top: 20px;
             margin-top: 20px;
             border-top: 1px solid #DDDDDD;
-            font-size: 10px;
+            font-size: 11px;
             color: #666666;
         }
 
         /* RESPONSIVE */
         @media (max-width: 600px) {
+            .hero-buttons .btn-whatsapp {
+                display: none;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -326,6 +383,18 @@
                 flex-direction: column;
                 gap: 10px;
             }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 72px;
+                right: 14px;
+                bottom: 14px;
+                font-size: 20px;
+            }
+
+            .whatsapp-float .wa-float-label {
+                font-size: 9px;
+            }
         }
     </style>
 </head>
@@ -334,7 +403,7 @@
     <nav class="navbar">
         <a href="#" class="logo">
             <!-- TROQUE AQUI PELA SUA LOGO -->
-            <img src="https://via.placeholder.com/40x40/CC0000/FFFFFF?text=R" alt="Romin Logo">
+            <img src="romin-soft.png" alt="Romin Logo">
             <span class="logo-text">ROMIN.DEV</span>
         </a>
         <ul class="nav-links">
@@ -352,6 +421,7 @@
         <div class="hero-buttons">
             <a href="#contato" class="btn btn-primary">Fale Conosco</a>
             <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+            <a href="https://wa.me/5585981337203" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><span class="wa-icon">🟢</span>WhatsApp</a>
         </div>
     </section>
 
@@ -430,6 +500,8 @@
             © 2026 Romin Desenvolvimento. Todos os direitos reservados.
         </div>
     </footer>
+
+    <a href="https://wa.me/5585981337203" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp"><span aria-hidden="true">🟢</span><span class="wa-float-label">WHATS</span></a>
 
 </body>
 </html>
