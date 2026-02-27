@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romin.dev - Software para PME</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #CC0000;
+        }
+
+        a:hover {
+            color: #990000;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #F5F5F5;
+            border-bottom: 2px solid #CC0000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-family: "Times New Roman", serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .nav-links a:hover {
+            color: #CC0000;
+            text-decoration: underline;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #DDDDDD;
+            background-color: #FFFFFF;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: #FFFFCC;
+            color: #CC0000;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            border: 1px solid #CC0000;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Times New Roman", serif;
+            font-size: 28px;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #CC0000;
+        }
+
+        .hero-description {
+            max-width: 550px;
+            margin: 0 auto 25px auto;
+            color: #444444;
+            font-size: 13px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 12px;
+            text-decoration: none;
+            font-family: Verdana, sans-serif;
+        }
+
+        .btn-primary {
+            background-color: #CC0000;
+            color: #FFFFFF;
+            border: 1px solid #990000;
+        }
+
+        .btn-primary:hover {
+            background-color: #990000;
+            color: #FFFFFF;
+        }
+
+        .btn-secondary {
+            background-color: #EEEEEE;
+            color: #000000;
+            border: 1px solid #999999;
+        }
+
+        .btn-secondary:hover {
+            background-color: #DDDDDD;
+            color: #000000;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-tag {
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            color: #CC0000;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            font-family: "Times New Roman", serif;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .service-card {
+            border: 1px solid #DDDDDD;
+            padding: 20px;
+            background-color: #FAFAFA;
+        }
+
+        .service-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .service-title {
+            font-family: "Times New Roman", serif;
+            font-size: 15px;
+            font-weight: bold;
+            color: #CC0000;
+            margin-bottom: 8px;
+        }
+
+        .service-desc {
+            font-size: 12px;
+            color: #444444;
+            margin-bottom: 10px;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background-color: #FFFFCC;
+            color: #CC0000;
+            padding: 2px 6px;
+            font-size: 10px;
+            border: 1px solid #CC0000;
+        }
+
+        /* WHY */
+        .why {
+            background-color: #F5F5F5;
+            padding: 40px 20px;
+            border-top: 1px solid #DDDDDD;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .why-title {
+            font-family: "Times New Roman", serif;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-item h4 {
+            font-family: "Times New Roman", serif;
+            color: #CC0000;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .why-item p {
+            font-size: 11px;
+            color: #444444;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #F5F5F5;
+            padding: 30px 20px;
+            border-top: 2px solid #CC0000;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-brand h3 {
+            font-family: "Times New Roman", serif;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        .footer-brand p {
+            font-size: 11px;
+            color: #444444;
+        }
+
+        .footer-contact h4 {
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            color: #CC0000;
+            margin-bottom: 8px;
+        }
+
+        .footer-contact ul {
+            list-style: none;
+        }
+
+        .footer-contact li {
+            font-size: 11px;
+            margin-bottom: 4px;
+            color: #000000;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #DDDDDD;
+            font-size: 10px;
+            color: #666666;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <!-- TROQUE AQUI PELA SUA LOGO -->
+            <img src="https://via.placeholder.com/40x40/CC0000/FFFFFF?text=R" alt="Romin Logo">
+            <span class="logo-text">ROMIN.DEV</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">★ Software para PME ★</div>
+        <h1>Sistemas que fazem sua <span>empresa crescer.</span></h1>
+        <p class="hero-description">
+            Desenvolvimento de software sob medida, automações e ERP pensados para pequenas e médias empresas. Simples, direto e eficiente.
+        </p>
+        <div class="hero-buttons">
+            <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+            <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="section-header">
+            <span class="section-tag">// Nossos Serviços</span>
+            <h2 class="section-title">O que a Romin pode fazer pela sua empresa</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <div class="service-title">Desenvolvimento de Sistemas</div>
+                <p class="service-desc">Sistemas web e desktop personalizados para o seu negócio. Do zero ao deploy, com foco em qualidade e usabilidade.</p>
+                <span class="service-tag">Sob Medida</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <div class="service-title">Automações</div>
+                <p class="service-desc">Elimine tarefas manuais e repetitivas. Automatizamos processos internos, integrações entre sistemas e fluxos de trabalho.</p>
+                <span class="service-tag">Produtividade</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <div class="service-title">ERP para PME</div>
+                <p class="service-desc">Sistema de gestão integrado para pequenas e médias empresas: estoque, financeiro, vendas e muito mais numa só plataforma.</p>
+                <span class="service-tag">Gestão</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <div class="service-title">Integrações</div>
+                <p class="service-desc">Conectamos suas ferramentas existentes — e-commerce, CRM, gateways, APIs externas — em um único ecossistema.</p>
+                <span class="service-tag">Conectividade</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="why">
+        <h2 class="why-title">Por que escolher a Romin?</h2>
+        <div class="why-grid">
+            <div class="why-item">
+                <h4>Foco em PME</h4>
+                <p>Entendemos os desafios reais de pequenas e médias empresas.</p>
+            </div>
+            <div class="why-item">
+                <h4>Entrega Rápida</h4>
+                <p>Metodologia ágil e comunicação direta.</p>
+            </div>
+            <div class="why-item">
+                <h4>Código de Qualidade</h4>
+                <p>Soluções escaláveis e de fácil manutenção.</p>
+            </div>
+            <div class="why-item">
+                <h4>Suporte Contínuo</h4>
+                <p>Estamos disponíveis para evoluir seu sistema.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Romin Desenvolvimento</h3>
+                <p>Software sob medida para quem precisa de soluções reais.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>// CONTATO</h4>
+                <ul>
+                    <li>📞 <a href="tel:+5585981337203">(85) 98133-7203</a></li>
+                    <li>✉️ <a href="mailto:contato@romin.dev.br">contato@romin.dev.br</a></li>
+                    <li>🌐 <a href="https://romin.dev.br">romin.dev.br</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Romin Desenvolvimento. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
