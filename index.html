@@ -302,6 +302,69 @@
             gap: 20px;
         }
 
+        /* PRODUCTS */
+        .products {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border-top: 1px solid #DDDDDD;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        .product-card {
+            border: 1px solid #DDDDDD;
+            padding: 18px;
+            background-color: #FAFAFA;
+        }
+
+        .product-name {
+            font-family: "Times New Roman", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #CC0000;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #444444;
+            margin-bottom: 12px;
+            min-height: 82px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .product-link {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            text-decoration: none;
+            border: 1px solid #CC0000;
+            color: #CC0000;
+            background-color: #FFF5F5;
+        }
+
+        .product-link:hover {
+            background-color: #CC0000;
+            color: #FFFFFF;
+        }
+
+        .product-site {
+            font-size: 11px;
+            color: #666666;
+        }
+
         .service-card {
             border: 1px solid #DDDDDD;
             padding: 20px;
@@ -439,6 +502,14 @@
                 grid-template-columns: 1fr;
             }
 
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-desc {
+                min-height: auto;
+            }
+
             .why-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -476,6 +547,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#produtos">Produtos</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
@@ -524,6 +596,42 @@
                 <p class="service-desc">Conectamos suas ferramentas existentes — e-commerce, CRM, gateways, APIs externas — em um único ecossistema.</p>
                 <span class="service-tag">Conectividade</span>
             </div>
+        </div>
+    </section>
+
+    <section class="products" id="produtos">
+        <div class="section-header">
+            <span class="section-tag">// Produtos Romin.dev</span>
+            <h2 class="section-title">Soluções prontas para acelerar seu negócio</h2>
+        </div>
+
+        <div class="products-grid">
+            <article class="product-card">
+                <h3 class="product-name">Venda Mais com B2B</h3>
+                <p class="product-desc">Crie sua loja online para atender clientes da sua cidade com catálogo digital, estoque inteligente, checkout rápido e gestão centralizada.</p>
+                <div class="product-actions">
+                    <a class="product-link" href="https://b2bshop.com.br/" target="_blank" rel="noopener noreferrer">Conhecer</a>
+                    <span class="product-site">b2bshop.com.br</span>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-name">BrasaLeads</h3>
+                <p class="product-desc">Captação de leads para vendedores de carros. O cliente preenche o formulário e você recebe no WhatsApp um lead qualificado, organizado e pronto para contato.</p>
+                <div class="product-actions">
+                    <a class="product-link" href="https://brasaleads.com.br/" target="_blank" rel="noopener noreferrer">Conhecer</a>
+                    <span class="product-site">brasaleads.com.br</span>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <h3 class="product-name">ControlaFácil</h3>
+                <p class="product-desc">Plataforma de gestão financeira pessoal para organizar entradas, saídas e visão mensal do dinheiro com mais clareza e controle.</p>
+                <div class="product-actions">
+                    <a class="product-link" href="https://controlafacil.romin.dev.br/login" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    <span class="product-site">controlafacil.romin.dev.br</span>
+                </div>
+            </article>
         </div>
     </section>
 
